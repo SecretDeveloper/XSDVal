@@ -47,9 +47,9 @@ namespace XSDVal
           XmlSchemaValidationFlags.ProcessInlineSchema |
           XmlSchemaValidationFlags.ProcessSchemaLocation;
 
-      XmlReader books = XmlReader.Create(xmlPath, schemaSettings);
+      XmlReader xml = XmlReader.Create(xmlPath, schemaSettings);
 
-      while (books.Read()) { }
+      while (xml.Read()) { }
     }
 
     static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
